@@ -105,6 +105,36 @@ echo $j['isshin'];
 
 echo "<br>";
 echo "<br>";
+
+//スーパーグローバル変数はコード上では読み込まれないため
+//中身の判断が難しい
+//詰まった場合は必ずvar_dumpしよう
+//var_dump($_GET);
+$user_names = array('apple','microsoft',"linux");
+foreach ($user_names as $value) {
+	echo "Likes ".$value;
+	echo "<br>";
+}
+
+echo "<br>";
+echo "<br>";
+
+$ary_count = count($user_names);
+//count()で配列の数を数える
+for ($i=0; $i < $ary_count ; $i++) { 
+	//配列の要素分($ary_count)繰り返す
+	$user_name = $user_names[$i];
+	echo $user_name;
+	echo "<br>";
+}
+
+
+
+
+
+
+echo "<br>";
+echo "<br>";
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -150,11 +180,11 @@ echo "<br>";
 
 	<br>
 	
-	mailadress<input type="email" name="">
+	mailadress<input type="email" name="nick_name"> 
 	
 	<br>
 	
-	password<input type="password" name="">
+	password<input type="password" name="password">
 	
 	<br>
 	
@@ -164,7 +194,7 @@ echo "<br>";
 	<input type="checkbox" name="class" value="ios">ios class
 	<input type="checkbox" name="class" value="web">Web class
 	
-	</div typ>
+	</div>
 
 
 	<br>
