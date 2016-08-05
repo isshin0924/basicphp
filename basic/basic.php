@@ -128,8 +128,18 @@ for ($i=0; $i < $ary_count ; $i++) {
 	echo "<br>";
 }
 
+//多次元配列
+//配列の要素としてさらに配列が入っている配列
+//DEからのデータを取得していた時などはこの多次元配列であることが多い
 
+$ichi = array("name" => "ichi","age" => 19);
+$gaku = array("name" => "gaku","age" => 22);
+$yuri = array("name" => "yuri","age" => 22);
 
+$users = array($ichi,$gaku,$yuri);
+var_dump($users);
+echo "<br>";
+var_dump($users[0]['name']);
 
 
 
